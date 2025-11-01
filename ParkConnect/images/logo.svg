@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 600 150" role="img" aria-label="ParkConnect - Wordmark">
-  <rect width="600" height="150" rx="18" fill="#FFF"/>
-  <text x="24" y="96" font-family="Poppins, Segoe UI, Roboto, Arial" font-weight="800" font-size="64" fill="#1A3A5F">Park</text>
-  <text x="188" y="96" font-family="Poppins, Segoe UI, Roboto, Arial" font-weight="800" font-size="64" fill="#2196F3">Connect</text>
-  <!-- connector motif -->
-  <circle cx="182" cy="72" r="6" fill="#FFC107"/>
-  <circle cx="180" cy="78" r="3" fill="#2196F3"/>
-</svg>
