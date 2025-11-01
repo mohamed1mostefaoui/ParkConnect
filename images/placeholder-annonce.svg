@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6FAFF"/>
+      <stop offset="100%" stop-color="#EEF3FB"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 48px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#1E3554; }
+      .subtitle { font: 400 26px 'Inter', 'Segoe UI', Arial, sans-serif; fill:#4A637D; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="720" rx="24" fill="url(#bg)" />
+
+  <!-- Dashed border -->
+  <rect x="24" y="24" width="1152" height="672" rx="20"
+        fill="none" stroke="#C7D5EA" stroke-width="6" stroke-dasharray="28 22" />
+
+  <!-- Plus button -->
+  <circle cx="600" cy="280" r="70" fill="#2F80F7" />
+  <path d="M600 240 v 80" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M560 280 h 80" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Text, perfectly centered -->
+  <text x="600" y="420" text-anchor="middle" class="title">Photo d'annonce</text>
+  <text x="600" y="465" text-anchor="middle" class="subtitle">Ajoutez vos propres images pour valoriser votre emplacement.</text>
+</svg>

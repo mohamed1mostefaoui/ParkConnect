@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="320" height="220" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration Aide</title>
+  <desc id="desc">Point d'interrogation stylisé pour la page de foire aux questions</desc>
+  <defs>
+    <linearGradient id="faqGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E3F2FD"/>
+      <stop offset="100%" stop-color="#F5F7FA"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="320" height="220" rx="28" fill="url(#faqGradient)"/>
+  <g transform="translate(80 36)">
+    <path d="M72 0c39.765 0 72 27.885 72 62.3 0 23.59-15.04 43.34-37.4 52.08l-1.6 28.62H66.8l-1.68-48.52C85.64 92.02 98 80.9 98 65.5c0-17.03-14.58-30.84-32.6-30.84-14.74 0-27.22 8.95-31.3 21.33l-28.54-8.94C13.38 17.94 40.84 0 72 0Z" fill="#2196F3" opacity="0.32"/>
+    <path d="M70 28c18.225 0 33 13.396 33 30 0 12.29-7.41 21.47-18.54 26.65-4.88 2.28-6.46 4.16-6.46 8.54v6H56v-8c0-11.86 6.45-16.64 11.35-18.87 6.79-3.06 11.65-7.58 11.65-14.32 0-8.43-7.88-15-17-15-8.2 0-15.67 4.98-17.72 11.94L24 50C28.35 37.46 47.23 28 70 28ZM58 122h24v24H58v-24Z" fill="#1A3A5F"/>
+    <circle cx="52" cy="132" r="12" fill="#FFC107"/>
+  </g>
+</svg>
