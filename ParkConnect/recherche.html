@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche d'annonces – ParkConnect</title>
+    <meta name="description" content="Explorez les offres de stationnement disponibles : comparez les prix, disponibilités, équipements et distances.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <a class="nav-brand" href="index.html">
+                <img src="images/logo.svg" alt="ParkConnect">
+            </a>
+            <nav class="nav-links" aria-label="Navigation principale">
+                <a href="index.html">Accueil</a>
+                <a href="recherche.html" aria-current="page">Rechercher</a>
+                <a href="deposer-annonce.html">Déposer une annonce</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+            <div class="nav-cta">
+                <a class="btn btn-secondary btn-icon" href="dashboard.html">Tableau de bord</a>
+                <a class="btn btn-secondary btn-icon" href="connexion.html">Connexion</a>
+                <a class="btn btn-primary btn-icon" href="inscription.html">S'inscrire</a>
+            </div>
+            <button class="burger" type="button" aria-label="Ouvrir le menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <header class="section-header">
+                    <h1>Trouvez la place de parking idéale</h1>
+                    <p>Limitez les choix à l'essentiel : lieu, date, type d'emplacement et budget. Visualisez les résultats sur une carte ou sous forme de liste détaillée.</p>
+                </header>
+                <div class="grid" style="grid-template-columns: 3fr 2fr; gap: var(--spacing-md);">
+                    <div>
+                        <form class="filters" action="recherche.html" method="get">
+                            <h2>Filtres</h2>
+                            <div class="filter-group">
+                                <label class="input-field" for="adresse">
+                                    Lieu ou adresse
+                                    <input id="adresse" name="adresse" type="text" placeholder="Ex. 15 rue de Sèze, Lyon">
+                                </label>
+                                <label class="input-field" for="date-entree">
+                                    Arrivée
+                                    <input id="date-entree" name="date-entree" type="datetime-local">
+                                </label>
+                                <label class="input-field" for="date-sortie">
+                                    Départ
+                                    <input id="date-sortie" name="date-sortie" type="datetime-local">
+                                </label>
+                                <label class="input-field" for="type">
+                                    Type d'emplacement
+                                    <select id="type" name="type">
+                                        <option value="">Tous</option>
+                                        <option value="couvert">Couvert</option>
+                                        <option value="plein-air">Plein air</option>
+                                        <option value="recharge">Recharge électrique</option>
+                                        <option value="handicap">Accessible PMR</option>
+                                    </select>
+                                </label>
+                            </div>
+                            <div class="filter-group">
+                                <label class="input-field" for="budget">
+                                    Budget max / heure (€)
+                                    <input id="budget" name="budget" type="number" min="2" step="1" placeholder="15">
+                                </label>
+                                <label class="input-field" for="tri">
+                                    Trier par
+                                    <select id="tri" name="tri">
+                                        <option value="pertinence">Pertinence</option>
+                                        <option value="prix">Prix croissant</option>
+                                        <option value="distance">Distance</option>
+                                        <option value="avis">Mieux notés</option>
+                                    </select>
+                                </label>
+                                <div class="input-field">
+                                    <span>Options</span>
+                                    <div class="listing-meta">
+                                        <label><input type="checkbox" name="surveillance"> Vidéo-surveillance</label>
+                                        <label><input type="checkbox" name="badge"> Accès badge</label>
+                                        <label><input type="checkbox" name="abri"> Emplacement couvert</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn btn-secondary" type="reset">Réinitialiser</button>
+                                <button class="btn btn-primary" type="submit">Afficher les résultats</button>
+                            </div>
+                        </form>
+
+                        <div class="listings" aria-live="polite">
+                            <article class="listing-card">
+                                <img src="images/annonce1.png" alt="Place sécurisée dans parking couvert" loading="lazy">
+                                <div>
+                                    <header class="flex-between">
+                                        <h2>Parking couvert – Lyon</h2>
+                                        <span class="listing-price">5,20 € / h</span>
+                                    </header>
+                                    <p>Place standard avec contrôle d'accès badge, vidéosurveillance 24/7 et recharge domestique.</p>
+                                    <div class="listing-meta">
+                                        <span>250 m du centre</span>
+                                        <span>Note : ★★★★☆ (32 avis)</span>
+                                        <span>Hauteur max 1,90 m</span>
+                                    </div>
+                                    <div class="form-actions">
+                                        <a class="btn btn-secondary btn-icon" href="annonce.html">Voir l'annonce</a>
+                                        <button class="btn btn-secondary btn-icon" type="button">Ajouter aux favoris</button>
+                                        <button class="btn btn-primary btn-icon" type="button">Contacter</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="listing-card">
+                                <img src="images/placeholder-annonce.svg" alt="Allée privée sécurisée avec barrière" loading="lazy">
+                                <div>
+                                    <header class="flex-between">
+                                        <h2>Allée privée – Bordeaux</h2>
+                                        <span class="listing-price">3,50 € / h</span>
+                                    </header>
+                                    <p>Emplacement extérieur éclairé, accès badge. Disponible en soirée et le week-end.</p>
+                                    <div class="listing-meta">
+                                        <span>Disponible ce soir</span>
+                                        <span>Note : ★★★★☆ (18 avis)</span>
+                                        <span>Largeur 2,80 m</span>
+                                    </div>
+                                    <div class="form-actions">
+                                        <a class="btn btn-secondary btn-icon" href="annonce.html">Voir l'annonce</a>
+                                        <button class="btn btn-secondary btn-icon" type="button">Ajouter aux favoris</button>
+                                        <button class="btn btn-primary btn-icon" type="button">Contacter</button>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="listing-card">
+                                <img src="images/placeholder-annonce.svg" alt="Box fermé sécurisé" loading="lazy">
+                                <div>
+                                    <header class="flex-between">
+                                        <h2>Box fermé – Paris</h2>
+                                        <span class="listing-price">120 € / mois</span>
+                                    </header>
+                                    <p>Box privatif au sous-sol, facile d'accès, idéal pour un véhicule ou du stockage sécurisé.</p>
+                                    <div class="listing-meta">
+                                        <span>Accès 24/7</span>
+                                        <span>Note : ★★★★★ (52 avis)</span>
+                                        <span>Caution 100 €</span>
+                                    </div>
+                                    <div class="form-actions">
+                                        <a class="btn btn-secondary btn-icon" href="annonce.html">Voir l'annonce</a>
+                                        <button class="btn btn-secondary btn-icon" type="button">Ajouter aux favoris</button>
+                                        <button class="btn btn-primary btn-icon" type="button">Contacter</button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <aside>
+                        <div class="map-preview" role="region" aria-label="Carte des parkings près de Toulouse INP-ENSIACET">
+                            <iframe
+                                src="https://www.openstreetmap.org/export/embed.html?bbox=1.4730%2C43.5590%2C1.5030%2C43.5750&layer=mapnik&marker=43.5646%2C1.4864"
+                                title="Carte interactive des parkings autour de Toulouse INP-ENSIACET"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                            <a class="map-link" href="https://www.openstreetmap.org/?mlat=43.5646&amp;mlon=1.4864#map=16/43.5646/1.4864" target="_blank" rel="noopener">Ouvrir sur OpenStreetMap</a>
+                        </div>
+                        <div class="card" style="margin-top: var(--spacing-sm);">
+                            <h2>Conseils pour optimiser votre recherche</h2>
+                            <ul>
+                                <li>Utilisez la divulgation progressive : commencez par le lieu, affinez ensuite avec l'heure et le prix.</li>
+                                <li>Activez les alertes dans votre tableau de bord pour être informé des nouvelles annonces.</li>
+                                <li>Filtrez par équipements pour gagner du temps (borne électrique, accès PMR, badge).</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a class="nav-brand" href="index.html">
+                        ParkConnect
+                    </a>
+                    <p>Gérez vos places de stationnement en toute confiance grâce à une interface claire et des utilisateurs vérifiés.</p>
+                </div>
+                <div class="footer-nav">
+                    <strong>Navigation</strong>
+                    <a href="recherche.html">Recherche</a>
+                    <a href="deposer-annonce.html">Déposer une annonce</a>
+                    <a href="dashboard.html">Tableau de bord</a>
+                </div>
+                <div class="footer-nav">
+                    <strong>Ressources</strong>
+                    <a href="faq.html">FAQ / Aide</a>
+                </div>
+                <div>
+                    <strong>Contact</strong>
+                    <p>Une question&nbsp;? &Eacute;crivez-nous &agrave; <a href="mailto:contact@parkconnect.fr">contact@parkconnect.fr</a>.</p>
+                    <div class="social-links" aria-label="Réseaux sociaux">
+                        <a href="#" aria-label="LinkedIn">in</a>
+                        <a href="#" aria-label="Twitter">X</a>
+                        <a href="#" aria-label="Facebook">f</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 ParkConnect. Tous droits réservés.</span>
+                <span>Site con&ccedil;u par Elouan Le Guyader et Mohamed Mostefaoui, &eacute;tudiants en formation d'ing&eacute;nieur en g&eacute;nie industriel &agrave; l'ENSIACET.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

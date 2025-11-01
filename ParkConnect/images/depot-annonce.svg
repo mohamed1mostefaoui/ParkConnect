@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" width="980" height="560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration de publication d'annonce simple et rassurante</title>
+  <desc id="desc">Deux cartes : à gauche un formulaire stylisé, à droite une checklist claire, avec une pastille de validation.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6FAFF"/>
+      <stop offset="100%" stop-color="#EEF3FB"/>
+    </linearGradient>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#112A53" flood-opacity="0.08"/>
+    </filter>
+
+    <style>
+      .card { fill:#FFFFFF; stroke:#E6EFFC; stroke-width:1; rx:20; ry:20; filter:url(#cardShadow); }
+      .muted { fill:#D7E5F8; }
+      .line  { fill:#DCE8F8; }
+      .accent{ fill:#2F80F7; }
+      .accentLight{ fill:#E6F0FF; }
+      .ok    { fill:#22C55E; }
+      .warn  { fill:#FFC24B; }
+      .label { fill:#11325B; opacity:.88; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="980" height="560" rx="28" fill="url(#bg)"/>
+
+  <!-- Left: form card -->
+  <g transform="translate(60,80)">
+    <rect class="card" x="0" y="0" width="520" height="360"/>
+    <!-- header -->
+    <rect class="accentLight" x="24" y="24" width="180" height="14" rx="7"/>
+    <rect class="accent" x="210" y="24" width="90" height="14" rx="7"/>
+    <!-- title line -->
+    <rect class="label" x="24" y="58" width="260" height="16" rx="8" opacity="0.12"/>
+    <!-- inputs rows -->
+    <rect class="line" x="24" y="92" width="472" height="38" rx="10"/>
+    <rect class="line" x="24" y="144" width="208" height="38" rx="10"/>
+    <rect class="line" x="248" y="144" width="248" height="38" rx="10"/>
+    <rect class="line" x="24" y="196" width="176" height="38" rx="10"/>
+    <rect class="line" x="208" y="196" width="288" height="38" rx="10"/>
+    <!-- textarea -->
+    <rect class="line" x="24" y="248" width="472" height="72" rx="12"/>
+    <!-- CTA -->
+    <rect class="accent" x="370" y="332" width="126" height="36" rx="10"/>
+    <rect class="muted" x="24" y="332" width="140" height="36" rx="10"/>
+  </g>
+
+  <!-- Right: checklist card -->
+  <g transform="translate(610,110)">
+    <rect class="card" x="0" y="0" width="300" height="280"/>
+    <!-- photo placeholder -->
+    <rect x="24" y="24" width="252" height="100" rx="12" fill="#F2F7FF" stroke="#DCE8F8"/>
+    <path d="M36 102 L76 62 L106 88 L126 74 L156 102 Z" fill="#CDE2FF"/>
+    <circle cx="70" cy="58" r="10" fill="#9CC7FF"/>
+    <!-- checklist items -->
+    <g transform="translate(24,142)">
+      <circle cx="12" cy="12" r="12" class="ok"/>
+      <path d="M7 12 l4 4 l6 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect class="label" x="32" y="6" width="200" height="12" rx="6" opacity=".22"/>
+      <rect class="line" x="32" y="24" width="180" height="10" rx="5"/>
+    </g>
+    <g transform="translate(24,186)">
+      <circle cx="12" cy="12" r="12" class="ok"/>
+      <path d="M7 12 l4 4 l6 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect class="label" x="32" y="6" width="220" height="12" rx="6" opacity=".22"/>
+      <rect class="line" x="32" y="24" width="164" height="10" rx="5"/>
+    </g>
+    <g transform="translate(24,230)">
+      <circle cx="12" cy="12" r="12" class="ok"/>
+      <path d="M7 12 l4 4 l6 -8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect class="label" x="32" y="6" width="180" height="12" rx="6" opacity=".22"/>
+      <rect class="line" x="32" y="24" width="124" height="10" rx="5"/>
+    </g>
+  </g>
+
+  <!-- Speed badge -->
+  <g transform="translate(602,388)">
+    <circle r="36" class="accent"/>
+    <path d="M-10 0 h18" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M0 -14 v28" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
